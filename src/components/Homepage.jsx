@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Homepage(){
 
@@ -25,10 +26,12 @@ function Homepage(){
 
             { characters && characters.map( (characterDetails, index) => {
                 return (
-                    <div key={index}>
+                    <div key={index} className="box">
                         <h3>{characterDetails.name}</h3>
                         <p>{characterDetails.occupation}</p>
                         <p>{characterDetails.weapon}</p>
+
+                        <Link to={`/characters/${characterDetails.id}`}>More Details</Link>
                     </div>
                 );
             } )}

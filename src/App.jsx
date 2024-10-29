@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom"
+
 import Homepage from "./components/Homepage"
+import CharacterDetails from "./components/CharacterDetails"
 
 function App() {
-
 
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/characters/:characterId" element={<CharacterDetails />} />
         <Route path="*" element={<h2>Page not found.</h2>} />
       </Routes>
       
