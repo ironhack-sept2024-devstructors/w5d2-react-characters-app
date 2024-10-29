@@ -51,8 +51,25 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.box {
-  border: 1px solid #fff;
-  padding: 0.5rem;
+.card {
+  border-radius: 10px;
+  outline: 1px solid #fff;
+  padding: 1rem;
   margin: 1rem;
 }
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-list .card {
+  flex: 0 1 100%;
+}
+
+@media (min-width: 768px){
+  .card-list .card {
+    flex: 0 1 calc(33% - 4rem); /* 33.33% minus 2x horizontal margins and 2x horizontal paddings */
+  }
+}
+

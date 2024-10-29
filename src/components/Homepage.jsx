@@ -24,17 +24,19 @@ function Homepage(){
                 : <h2>Numbers of characters in our API: {characters.length}</h2>  
             }
 
-            { characters && characters.map( (characterDetails, index) => {
-                return (
-                    <div key={index} className="box">
-                        <h3>{characterDetails.name}</h3>
-                        <p>{characterDetails.occupation}</p>
-                        <p>{characterDetails.weapon}</p>
+            <div className="card-list">
+                { characters && characters.map( (characterDetails, index) => {
+                    return (
+                        <div key={index} className="card">
+                            <h3>{characterDetails.name}</h3>
+                            <p>{characterDetails.occupation}</p>
+                            <p>{characterDetails.weapon}</p>
 
-                        <Link to={`/characters/${characterDetails.id}`}>More Details</Link>
-                    </div>
-                );
-            } )}
+                            <Link to={`/characters/${characterDetails.id}`}>More Details</Link>
+                        </div>
+                    );
+                } )}
+            </div>
         </>
     );
 }

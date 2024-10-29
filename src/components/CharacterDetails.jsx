@@ -25,7 +25,7 @@ function CharacterDetails() {
       { character === null && <h2>Loading...</h2> }
 
       { character && 
-        <div className="box">
+        <div className="card">
           <p>Name: {character.name}</p>
           <p>Occupation: {character.occupation}</p>
           <p>Weapon: {character.weapon}</p>
